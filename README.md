@@ -3,7 +3,7 @@ SSRR
 兼容SSRPanel的自改版SSR(R)后端，可兼容原版SS、SSR
 
 ## 安装
-- wget https://github.com/ssrpanel/shadowsocksr/archive/master.zip && unzip master && mv shadowsocksr-master shadowsocksr
+- wget https://github.com/yongjie0203/shadowsocksr/archive/master.zip && unzip master && mv shadowsocksr-master shadowsocksr
 
 ## 更新软件源
 #### CentOS
@@ -20,7 +20,7 @@ SSRR
 # Ubuntu/Debian:
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev gcc
+xz-utils tk-dev libffi-dev liblzma-dev gcc git unzip
 
 # Fedora/CentOS/RHEL(aws ec2):
 sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
@@ -54,6 +54,9 @@ cd shadowsocksr
 pip install -r requestment.txt
 ```
 ---
+rm user-config.json
+wget https://raw.githubusercontent.com/yongjie0203/shadowsocksr/master/user-config.json
+
 
 #### Python2.x
 ```
@@ -102,4 +105,7 @@ pip install -r requestment.txt
 数据库机的 iptables、firewall 得对本节点IP开放
 数据库机的 mysql 的对本节点进行授权（不推荐使用root账号）
 再不懂可以进小群咨询 [我要进小群](https://github.com/ssrpanel/SSRPanel/wiki/%E6%88%91%E8%A6%81%E8%BF%9B%E5%B0%8F%E7%BE%A4)
+
+### bbrplus
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 
