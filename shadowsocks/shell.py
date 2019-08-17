@@ -297,7 +297,7 @@ def get_config(is_local):
         level = logging.INFO
     verbose = config['verbose']
     logging.basicConfig(level=level,
-                        format='[%(levelname)s] %(filename)s:%(lineno)s(%(funcName)s) %(message)s',
+                        format='[%(levelname)s] %(asctime)s %(filename)s:%(lineno)s(%(funcName)s) %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
     root = logging.getLogger()
     filter_obj = logging.Filter()
