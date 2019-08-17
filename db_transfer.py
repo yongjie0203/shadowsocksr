@@ -599,8 +599,9 @@ class Dbv3Transfer(DbTransfer):
 
         cur = conn.cursor()
         try:
-            rows = []
+            
             cur.execute("SELECT " + ','.join(keys) + " FROM user where port != 0 and status = 1")
+            rows = []
             for r in cur.fetchall():
                 d = {}
                 for column in range(len(keys)):
