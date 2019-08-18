@@ -237,7 +237,7 @@ class TransferBase(object):
     def thread_db(obj):
         import socket
         global db_instance
-        timeout = 60
+        timeout = 60*2
         socket.setdefaulttimeout(timeout)
         last_rows = []
         db_instance = obj()
